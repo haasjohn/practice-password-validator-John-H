@@ -1,16 +1,11 @@
 // Make sure to install readline-sync first:
 // 
 //npm install readline-sync
-//const readline = require('readline-sync');
-
-
-
-
 const readlineSync = require("readline-sync");
 
-let isValid = false;
+let valid = false;
 
-while (!isValid) {
+while (!valid) {
   let password = readlineSync.question("Enter a password: ");
 
   let hasUppercase = false;
@@ -38,7 +33,7 @@ while (!isValid) {
   // Final validation
   if (hasUppercase && hasNumber) {
     console.log("Password accepted! You have been successful.");
-    isValid = true;
+    valid = true;
   } else {
     console.log("Password must contain at least one uppercase letter and one number.\n");
   }
