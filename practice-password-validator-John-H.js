@@ -30,9 +30,9 @@ while (!valid) {
     }
   }
 
-  // Final validation
+  // verify password has an uppercase and number
   if (hasUppercase && hasNumber) {
-    console.log("Password accepted! You have been successful.");
+    console.log("Password accepted");
     valid = true;
   } else {
     console.log("Password must contain at least one uppercase letter and one number.\n");
